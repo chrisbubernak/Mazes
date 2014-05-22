@@ -85,25 +85,25 @@ public class Main {
 			        	int key = e.getKeyCode();
 			            int cur = maze.getCurrent();
 			            Cell cell = maze.getCell(cur);
-			            if (key == KeyEvent.VK_KP_LEFT || key == KeyEvent.VK_LEFT)
+			            if (key == KeyEvent.VK_KP_LEFT || key == KeyEvent.VK_LEFT || e.getKeyChar() == 'a' || e.getKeyChar() == 'A')
 			            {
 			            	if (cell.isConnected(cur-1)) {
 			            		maze.setCurrent(cur-1);
 			            	}
 			            }
-			            else if (key == KeyEvent.VK_KP_RIGHT || key == KeyEvent.VK_RIGHT)
+			            else if (key == KeyEvent.VK_KP_RIGHT || key == KeyEvent.VK_RIGHT || e.getKeyChar() == 'd' || e.getKeyChar() == 'D')
 			            {
 			            	if (cell.isConnected(cur+1)) {
 			            		maze.setCurrent(cur+1);
 			            	}
 			            }
-			            else if (key == KeyEvent.VK_KP_UP || key == KeyEvent.VK_UP)
+			            else if (key == KeyEvent.VK_KP_UP || key == KeyEvent.VK_UP || e.getKeyChar() == 'w' || e.getKeyChar() == 'W')
 			            {
 			            	if (cell.isConnected(cur-maze.getN())) {
 			            		maze.setCurrent(cur-maze.getN());
 			            	}
 			            }
-			            else if (key == KeyEvent.VK_KP_DOWN || key == KeyEvent.VK_DOWN)
+			            else if (key == KeyEvent.VK_KP_DOWN || key == KeyEvent.VK_DOWN || e.getKeyChar() == 's' || e.getKeyChar() == 'S')
 			            {
 			            	if (cell.isConnected(cur+maze.getN())) {
 			            		maze.setCurrent(cur+maze.getN());
